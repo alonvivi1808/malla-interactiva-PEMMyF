@@ -44,35 +44,39 @@ h1 {
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s, text-decoration 0.3s;
 }
 
+/* ✅ Ramos aprobados: verde y tachado */
 .ramo.aprobado {
   background: #27ae60;
   color: white;
+  text-decoration: line-through;
 }
 
-.ramo.habilitado {
+/* ⚠️ Ramos habilitados pero no aprobados: amarillo */
+.ramo.habilitado:not(.aprobado) {
   background: #f1c40f;
   color: #000;
 }
 
+/* Colores por tipo */
 .ramo.FF {
-  border-left: 5px solid #5dade2;
+  border-left: 5px solid #5dade2; /* Azul claro */
 }
 
 .ramo.FB {
-  border-left: 5px solid #58d68d;
+  border-left: 5px solid #58d68d; /* Verde claro */
 }
 
 .ramo.FD {
-  border-left: 5px solid #af7ac5;
+  border-left: 5px solid #af7ac5; /* Violeta */
 }
 
 .ramo.FC {
-  border-left: 5px solid #f39c12;
+  border-left: 5px solid #f39c12; /* Naranjo */
 }
 
 .ramo.DC {
-  border-left: 5px solid #e67e22;
+  border-left: 5px solid #e67e22; /* Naranjo oscuro */
 }
